@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>API de Usuários — Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="barra-topo">
+    <div class="bt-esquerda">
+      <div class="fileira-pontos"><span></span><span></span><span></span></div>
+      <span class="bt-etiqueta">api-usuarios / index.html</span>
+    </div>
+    <div class="bt-direita">
+      <span class="ponto-status"></span> jsonplaceholder.typicode.com
+    </div>
+  </nav>
+
+  <main class="pagina">
+    <header class="hero">
+      <div>
+        <div class="etiqueta">Mini Portfólio · async/await</div>
+        <h1>Usuários<br><em>API</em></h1>
+        <p class="hero-sub">
+          Consumindo dados reais com fetch + async/await<br>
+          ↳ JSONPlaceholder REST API
+        </p>
+      </div>
+      <button class="btn-recarregar" id="btnRecarregar" onclick="buscarUsuarios()">
+        <span class="icone-recarga">⟳</span>
+        Recarregar
+      </button>
+    </header>
+
+    <div class="divisor"></div>
+
+    <div class="barra-stats">
+      <div class="stat">
+        <span class="stat-val" id="statTotal">—</span>
+        <span class="stat-label">Usuários</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val verde" id="statCidades">—</span>
+        <span class="stat-label">Cidades</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val rosa" id="statEmpresas">—</span>
+        <span class="stat-label">Empresas</span>
+      </div>
+    </div>
+
+    <div class="estado-carregamento show" id="estadoCarregamento">
+      <div class="spinner"></div>
+      <span class="texto-carregando">Carregando usuários</span>
+    </div>
+
+    <div class="estado-erro" id="estadoErro">
+      <div class="titulo-erro">// erro de conexão</div>
+      <div class="msg-erro" id="msgErro">Não foi possível buscar os dados.</div>
+    </div>
+
+    <div class="grade" id="grade"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
